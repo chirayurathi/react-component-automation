@@ -168,9 +168,9 @@ This boilerplate and files names were made according to the file structure I fol
       `
     ```
     
-### Note:
+   #### Note:
   
-  JS and CSS variables are declared twice , for for class based component and other for function based component.
+   JS and CSS variables are declared twice , for for class based component and other for function based component.
   
-  comments are added in their respective lines to make it easier to locate them.
+   comments are added in their respective lines to make it easier to locate them.
     
