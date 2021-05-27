@@ -66,6 +66,7 @@ const checks = (js,css)=>{
 }
 
 if(process.argv[2] == 'class'){
+    // class base js file boilerplate
     let js = `import React,{Component} from 'react'
 import Style from './${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)}.module.css'
 
@@ -81,13 +82,17 @@ class ${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)} extends 
 
 export default ${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)}
     `
+// end class base js file boilerplate
+// class base css file boilerplate
     let css = `.${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)}{
 
 }
 `
+//end of class base js file boilerplate
     checks(js,css)
 }
 else if(process.argv[2] == 'function'){
+    // function base js file boilerplate
     let js = `import React from 'react'
 import Style from './${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)}.module.css'
 
@@ -101,10 +106,13 @@ const ${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)} = (props
 
 export default ${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)}
 `
+// end of function base js file boilerplate
+// function base css file boilerplate
     let css = `.${process.argv[3].substring(process.argv[3].lastIndexOf('\\')+1)}{
         
 }
     `
+//end of function base css file boilerplate
     checks(js,css)
 }
 else{
